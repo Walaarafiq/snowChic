@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معطف شتوي فاخر | Snow Chic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d1a2f;
+            --secondary-color: #f7f7f7;
+            --accent-color: #e4be7a;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* إعادة استخدام أنماط الشريط العلوي والتذييل من الصفحة الرئيسية */
+        .navbar { background-color: var(--primary-color); padding: 1rem 2rem; }
+        .navbar-brand { color: var(--accent-color) !important; font-weight: bold; font-size: 1.5rem; }
+        .nav-link { color: var(--secondary-color) !important; margin-right: 1.5rem; transition: color 0.3s; }
+        .nav-link:hover { color: var(--accent-color) !important; }
+        .search-form { position: relative; }
+        .search-form input { border: none; border-radius: 20px; padding-right: 30px; }
+        .search-form .search-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #999; }
+        
+        .footer { background-color: var(--primary-color); color: var(--secondary-color); padding: 3rem 0; }
+        .footer h5 { color: var(--accent-color); margin-bottom: 1.5rem; }
+        .footer a { color: var(--secondary-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: var(--accent-color); }
+        .social-icons a { font-size: 1.5rem; margin-left: 1rem; }
+
+        /* أنماط خاصة بصفحة تفاصيل المنتج */
+        .product-details {
+            padding: 4rem 0;
+        }
+        .product-image-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-info h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .product-info .price {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .product-info p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        .option-group label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .option-group select, .option-group .btn {
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .btn-add-to-cart {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 3rem;
+            font-size: 1.25rem;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+        .btn-add-to-cart:hover {
+            background-color: #21324a;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Snow Chic</a>
+            </div>
+    </nav>
+
+    <div class="container product-details">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="product-image-container">
+                    <img src="images/Looking for winter outfit inspo with an old money….jpg" class="img-fluid" alt="صورة المنتج" style="height: 600px;">
+                </div>
+            </div>
+            <div class="col-lg-6 product-info">
+                <h1>معطف شتوي فاخر</h1>
+                <p class="price">550 SAR</p>
+                <p>
+                    معطف مصمم بأناقة من أجود أنواع الصوف، يوفر لك الدفء والراحة في أشد الأيام برودة. يتميز بقصته العصرية والياقة العريضة الأنيقة، مما يجعله الإضافة المثالية لخزانة ملابسك الشتوية. متوفر بألوان متعددة.
+                </p>
+
+                <div class="option-group my-4">
+                    <label for="size-select" class="form-label">المقاس:</label>
+                    <select class="form-select w-50" id="size-select">
+                        <option selected disabled>اختر مقاسك</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div class="option-group my-4">
+                    <label class="form-label">اللون:</label>
+                    <div>
+                        <button class="btn btn-outline-secondary me-2">بيج</button>
+                        <button class="btn btn-outline-secondary me-2">أسود</button>
+                        <button class="btn btn-outline-secondary">رمادي</button>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-add-to-cart" type="button">أضف إلى السلة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>عن المتجر</h5>
+                    <p>متجر Snow Chic هو وجهتك الأولى للملابس الشتوية النسائية الأنيقة والدافئة.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">المنتجات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>تابعنا</h5>
+                    <div class="social-icons" >
+                        <a href="#" style="font-size: 15px;">+966 598475841</a>
+                        <br>
+                        <a href="#" style="font-size: 15px;">snowchic@gmail.com</a>
+                        <br>
+                        <a href="#" style="font-size: 15px;">saudi arabia - jeddah</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

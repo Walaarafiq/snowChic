@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق | Snow Chic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d1a2f;
+            --secondary-color: #f7f7f7;
+            --accent-color: #e4be7a;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+        
+        /* إعادة استخدام أنماط الشريط العلوي والتذييل من الصفحة الرئيسية */
+        .navbar { background-color: var(--primary-color); padding: 1rem 2rem; }
+        .navbar-brand { color: var(--accent-color) !important; font-weight: bold; font-size: 1.5rem; }
+        .nav-link { color: var(--secondary-color) !important; margin-right: 1.5rem; transition: color 0.3s; }
+        .nav-link:hover { color: var(--accent-color) !important; }
+        .search-form { position: relative; }
+        .search-form input { border: none; border-radius: 20px; padding-right: 30px; }
+        .search-form .search-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #999; }
+        
+        .footer { background-color: var(--primary-color); color: var(--secondary-color); padding: 3rem 0; }
+        .footer h5 { color: var(--accent-color); margin-bottom: 1.5rem; }
+        .footer a { color: var(--secondary-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: var(--accent-color); }
+        .social-icons a { font-size: 1.5rem; margin-left: 1rem; }
+
+        /* أنماط خاصة بصفحة سلة التسوق */
+        .cart-section {
+            padding: 4rem 0;
+        }
+        .cart-section h1 {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1.5rem;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-left: 1rem;
+        }
+        .item-details h5 {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .item-details p {
+            color: #777;
+            margin-bottom: 0;
+        }
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+        }
+        .cart-summary {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .cart-summary h4 {
+            font-weight: bold;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .cart-summary p {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .btn-checkout {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            font-size: 1.25rem;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Snow Chic</a>
+            </div>
+    </nav>
+
+    <div class="container cart-section">
+        <h1 class="text-center">سلة التسوق</h1>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-item">
+                    <img src="images/Looking for winter outfit inspo with an old money….jpg" alt="معطف شتوي">
+                    <div class="item-details flex-grow-1">
+                        <h5>معطف شتوي فاخر</h5>
+                        <p>اللون: بيج | المقاس: M</p>
+                    </div>
+                    <div class="quantity-control me-4">
+                        <input type="number" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="item-price">
+                        <p>550 SAR</p>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <img src="images/e6b47be4-5942-4368-be1b-f7040aa3840c.jpg" alt="وشاح من الكشمير">
+                    <div class="item-details flex-grow-1">
+                        <h5>وشاح من الكشمير</h5>
+                        <p>اللون: رمادي</p>
+                    </div>
+                    <div class="quantity-control me-4">
+                        <input type="number" class="form-control" value="1" min="1">
+                    </div>
+                    <div class="item-price">
+                        <p>150 SAR</p>
+                    </div>
+                </div>
+                </div>
+            
+            <div class="col-lg-4">
+                <div class="cart-summary">
+                    <h4>ملخص الطلب</h4>
+                    <p>المجموع الفرعي: <span>700 SAR</span></p>
+                    <p>تكاليف الشحن: <span>50 SAR</span></p>
+                    <hr>
+                    <p class="h5">الإجمالي: <span>750 SAR</span></p>
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-checkout" type="button" ><a href="buy.html" style="color: white; font-style: none;">
+                            إتمام الشراء
+                        </a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>عن المتجر</h5>
+                    <p>متجر Snow Chic هو وجهتك الأولى للملابس الشتوية النسائية الأنيقة والدافئة.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">المنتجات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>تابعنا</h5>
+                    <div class="social-icons" >
+                        <a href="#" style="font-size: 15px;">+966 598475841</a>
+                        <br>
+                        <a href="#" style="font-size: 15px;">snowchic@gmail.com</a>
+                        <br>
+                        <a href="#" style="font-size: 15px;">saudi arabia - jeddah</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
